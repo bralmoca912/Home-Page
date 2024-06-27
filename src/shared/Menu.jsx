@@ -11,10 +11,31 @@ function Menu() {
 
   return (
     <div className="mt-5 flex mb-8">
-      <img src={logo} alt="" />
+      <img className="sm:hidden" src={logo} alt="" />
 
       {/* Menu para Desktop */}
-      <div className="hidden sm:block"></div>
+      <div className="hidden sm:block w-full">
+        <div className="flex p-2 my-10 w-full">
+          <img src={logo} alt="Logo W" />
+          <ul className="w-full flex justify-end text-[19px] gap-[43px]">
+            <button className="hover:text-SoftOrange" to="/">
+              Home
+            </button>
+            <button className="hover:text-SoftOrange" to="/new">
+              New
+            </button>
+            <button className="hover:text-SoftOrange" to="/popular">
+              Popular
+            </button>
+            <button className="hover:text-SoftOrange" to="/trending">
+              Trending
+            </button>
+            <button className="hover:text-SoftOrange" to="/categories">
+              Categories
+            </button>
+          </ul>
+        </div>
+      </div>
 
       {/* Menú para Mobile  */}
       <div className="sm:hidden w-full">
@@ -25,19 +46,19 @@ function Menu() {
         </div>
 
         {show && (
-          <div className="bg-slate-950/40 w-full h-full fixed top-0 right-0">
-            <div className="bg-slate-200 h-full w-4/6 right-0 top-0 absolute">
+          <div className="bg-slate-950/50 w-full h-full fixed top-0 right-0">
+            <div className="bg-OffWhite h-full w-4/6 right-0 top-0 absolute">
               <div className="mt-9 pr-5 w-full flex justify-end">
                 <button onClick={handleClick}>
                   <img src={iconClose} alt="" />
                 </button>
               </div>
               <ul className="ml-5 mt-20 grid gap-6 text-xl font-semibold">
-                <li>Home</li>
-                <li>New</li>
-                <li>Popular</li>
-                <li>Trending</li>
-                <li>Categories</li>
+                <button>Home</button>
+                <button>New</button>
+                <button>Popular</button>
+                <button>Trending</button>
+                <button>Categories</button>
               </ul>
             </div>
           </div>
