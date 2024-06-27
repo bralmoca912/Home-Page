@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div className="border text-3xl">
+      <div className=" mt-8 mx-3">
         <Menu></Menu>
         <Home></Home>
       </div>
