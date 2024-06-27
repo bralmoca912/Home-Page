@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div className=" mt-8 mx-3">
+      <div className="max-w-screen-xl mx-auto mt-8 px-4">
         <Menu></Menu>
         <Home></Home>
       </div>
